@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ToDoList" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <input
+          id="inputValue"
+          placeholder="Adicione sua atividade"
+          autofocus
+          type="text"
+          name="Insira aqui uma atividade"
+        />
+        <button onclick="saveValue()" class="submit" type="submit" id="add">
+          Adicionar
+        </button>
+      </header>
+      <main class="tags">
+        <ul class="list" id="listValue">
+          <li>
+            <span class="list__text">Lorem ipsum</span>
+            <button class="delete" name="delete">
+              <img class="delete__img" src="./css/img/trash-solid.svg" />
+            </button>
+          </li>
+          <li>
+            <span class="list__text">Lorem ipsum</span>
+            <button class="delete" name="delete">
+              <img class="delete__img" src="./css/img/trash-solid.svg" />
+            </button>
+          </li>
+          <li>
+            <span class="list__text">Lorem ipsum</span>
+            <button class="delete" name="delete">
+              <img class="delete__img" src="./css/img/trash-solid.svg" />
+            </button>
+          </li>
+          <li>
+            <span class="list__text">Lorem ipsum</span>
+            <button class="delete" name="delete">
+              <img class="delete__img" src="./css/img/trash-solid.svg" />
+            </button>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

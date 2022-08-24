@@ -1,0 +1,12 @@
+A aplicação deve ter um input.
+O input deverá ter o placeholder "digite sua task".
+A aplicação deve ter um botão de "adicionar".
+Ao clicar no botão de salvar o input deve ser 
+limpo e deve ser adicionado o valor do mesmo
+em uma lista abaixo do campo input e do botão.
+
+Ao clicar em uma elemento da lista o mesmo deve ser removido
+Abaixo da lista, usando um H1 você de contar quantos elementos
+tem com a mensagem " você tem X elemento(s)".
+Obs: esse valor deve ser dinâmico, ou seja, ao adicionar ou remover
+ele deve ser atualizado
