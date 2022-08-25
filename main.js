@@ -15,23 +15,35 @@ function insertItem(text) {
   listValue.appendChild(listItem);
 }
 
-function managerInput() {
+const managerInput = () => {
+  const inputElement = document.getElementById("inputValue");
+  const value = inputElement.value;
+  inputElement.value = "";
+  return value;
+};
+// const promptAlert = (name) => {
+//   return { name: `Hello ${name}`, value: Boolean(name) };
+// };
+
+// console.log("teste 1", typeof promptAlert(true).name);
+// console.log("teste 2", typeof promptAlert("Mozão").value);
+
+// insertItem("teste");
+const getInputValue = () => {
   const inputValue = document.getElementById("inputValue");
   const value = inputValue.value;
   inputValue.value = "";
   return value;
-}
-
-insertItem("teste");
+};
 
 function saveValue() {
-  const text = getValueInput();
-  clearInput();
+  const text = getInputValue();
+  // clearInput();
   insertItem(text);
-  uptadeStorage();
-
+  // uptadeStorage();
+  // managerInput();
   // const text = managerInput();
-  // console.log("saveValue called with", text);
+  console.log("saveValue called with"); //,text
 
   // insertItem(new Date().toString());
 
