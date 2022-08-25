@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./base.css" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="ToDoList" />
   </head>
@@ -21,39 +20,14 @@
           autofocus
           type="text"
           name="Insira aqui uma atividade"
+          id="inputValue"
         />
-        <button onclick="saveValue()" class="submit" type="submit" id="add">
-          Adicionar
-        </button>
+        <button class="submit" id="inputButton">Adicionar</button>
       </header>
       <main class="tags">
-        <ul class="list" id="listValue">
-          <li>
-            <span class="list__text">Lorem ipsum</span>
-            <button class="delete" name="delete">
-              <img class="delete__img" src="./css/img/trash-solid.svg" />
-            </button>
-          </li>
-          <li>
-            <span class="list__text">Lorem ipsum</span>
-            <button class="delete" name="delete">
-              <img class="delete__img" src="./css/img/trash-solid.svg" />
-            </button>
-          </li>
-          <li>
-            <span class="list__text">Lorem ipsum</span>
-            <button class="delete" name="delete">
-              <img class="delete__img" src="./css/img/trash-solid.svg" />
-            </button>
-          </li>
-          <li>
-            <span class="list__text">Lorem ipsum</span>
-            <button class="delete" name="delete">
-              <img class="delete__img" src="./css/img/trash-solid.svg" />
-            </button>
-          </li>
-        </ul>
+        <ul class="list" id="listValue"></ul>
       </main>
     </div>
+    <script src="./main.js"></script>
   </body>
 </html>
