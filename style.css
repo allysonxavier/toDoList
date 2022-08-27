@@ -1,7 +1,8 @@
 .container {
   margin: 0 auto;
   margin-top: 80px;
-  width: 100%;
+  width: 80%;
+  max-width: 768px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +10,7 @@
 }
 .header {
   box-shadow: 0 0 1em var(--secondary-ligth);
-  padding: 0.8rem;
+  padding: 8px;
   border-radius: 8px;
   width: 100%;
   max-width: 768px;
@@ -49,14 +50,13 @@ input:focus {
 .tags {
   justify-content: space-around;
   width: 100%;
-  /* align-items: center; */
   margin-top: 40px;
 }
 li {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-
+  flex-direction: ;
   align-items: center;
   margin-bottom: 30px;
   align-items: center;
@@ -82,12 +82,12 @@ li {
   margin: 0 30px;
 }
 
-.delete {
-  height: 40px;
-  width: 40px;
+.delete__img {
+  height: 30px;
+  width: 30px;
   border-radius: 8px;
   background-color: transparent;
-  box-shadow: inset 0 0 1rem var(--secondary-ligth);
+  /* box-shadow: inset 0 0 1rem var(--secondary-ligth); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,8 +98,13 @@ li {
 .delete:hover {
   opacity: 0.7;
 }
-.delete__img {
-  width: auto;
-  max-width: 15px;
-  fill: var(--secondary-dark);
+button {
+  border: none;
+  background-color: transparent;
+}
+span {
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Source Serif Pro", serif;
+  margin: 0 30px;
 }
