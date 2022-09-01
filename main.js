@@ -2,6 +2,7 @@ const KEY_LOCAL_TASKS = "TasksToDo";
 
 const inputButton = document.getElementById("inputButton");
 inputButton.addEventListener("click", saveValue);
+const deleteButton = document.getElementById("delete__button");
 const listValue = document.getElementById("listValue");
 const inputEvent = document.getElementById("inputEvent");
 const inputText = document.createElement("span");
@@ -22,12 +23,12 @@ const getStorageValue = () => {
   }
   return parsedArray;
 };
-const getStorageValueClone = () => {
-  const savedLocal = localStorage.getItem("listValue1");
+// const getStorageValueClone = () => {
+//   const savedLocal = localStorage.getItem("listValue1");
 
-  return JSON.parse(savedLocal) || [];
-};
-function insertItem(text) {
+//   return JSON.parse(savedLocal) || [];
+// };
+const insertItem = (text) => {
   const listItem = document.createElement("li");
   listValue.appendChild(listItem);
   const element = document.createElement("span");
@@ -39,7 +40,8 @@ function insertItem(text) {
   buttonTag.appendChild(listBox);
   listBox.setAttribute("class", "delete__img");
   listBox.setAttribute("src", "./css/img/trash-solid.svg");
-}
+  buttonTag.setAttribute("id", "delete__button");
+};
 
 const valorMemo = (text) => {
   const storageValue = getStorageValue();
@@ -54,12 +56,6 @@ const reatributeValue = () => {
     });
   }
 };
-const managerInput = () => {
-  const inputElement = document.getElementById("inputValue");
-  const value = inputElement.value;
-  inputElement.value = "";
-  return value;
-};
 
 const getInputValue = () => {
   const inputValue = document.getElementById("inputValue");
@@ -73,4 +69,23 @@ function saveValue() {
   insertItem(text);
 
   valorMemo(text);
+  eraseListValue();
 }
+const eraseListValue = () => {
+  const deleteV = document.querySelectorAll("#delete__button");
+  deleteV.forEach((e) => {
+    e.addEventListener("click", function () {
+      const elem = this.parentNode;
+      // elem.closest("li").remove();
+      elem.remove();
+
+      console.log("eu");
+    });
+  });
+};
+eraseListValue();
+// eraseListValue();
+// const deleteButton = document.getElementById("delete__button");
+
+// deleteButton.parentNode.removeChild(deleteButton);
+// console.log("erase");
